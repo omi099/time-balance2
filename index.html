@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Time Balance</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Time Balance</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-    <div class="container">
-        <nav>
-            <h1>Time Balance</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" id="theme-toggle" title="Toggle Dark Mode">🌙</a></li>
-            </ul>
-        </nav>
-        <main>
-            <div class="balance-card neumorphic">
-                <h2>Remaining Time Today</h2>
-                <div class="balance">
-                    <span id="hours-value">00</span>h 
-                    <span id="minutes-value">00</span>m 
-                    <span id="seconds-value">00</span>s
-                </div>
-                <div class="progress-bar neumorphic">
-                    <div class="progress" id="progress"></div>
-                </div>
-            </div>
-            <div class="quote neumorphic">
-                <p id="quote-text"></p>
-            </div>
-            <div class="pomodoro neumorphic">
-                <h3>Pomodoro Timer</h3>
-                <div class="timer">
-                    <span id="pomodoro-minutes">25</span>:<span id="pomodoro-seconds">00</span>
-                </div>
-                <div class="pomodoro-controls">
-                    <button id="start-pomodoro" class="btn neumorphic">Start</button>
-                    <button id="reset-pomodoro" class="btn neumorphic">Reset</button>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <p>© 2024 Ultimate Time Balance. All rights reserved.</p>
-        </footer>
-    </div>
-    <audio id="notification-sound" src="notification.mp3" preload="auto"></audio>
-    <script src="script.js"></script>
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <div class="container">
+    <nav>
+      <h1>Time Balance</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" id="theme-toggle" title="Toggle Dark Mode">🌙</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="balance-card neumorphic">
+        <h2>Remaining Time Balance Today</h2>
+        <div class="balance">
+          <div class="balance-values">
+            <span id="balance-seconds">0</span>s /
+            <span id="balance-minutes">0</span>min /
+            <span id="balance-hours">0</span>hour(s)
+          </div>
+        </div>
+        <div class="progress-bar neumorphic">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <div class="custom-timer neumorphic">
+        <h3>Set Custom Timer</h3>
+        <label for="hours">Hours:</label>
+        <input type="number" id="custom-hours" min="0" max="23" value="0">
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="custom-minutes" min="0" max="59" value="0">
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="custom-seconds" min="0" max="59" value="0">
+        <button id="start-custom-timer" class="btn neumorphic">Start Timer</button>
+        <button id="reset-custom-timer" class="btn neumorphic">Reset Timer</button>
+      </div>
+
+      <div class="quote neumorphic">
+        <p id="quote-text"></p>
+      </div>
+
+      <div class="pomodoro neumorphic">
+        <h3>Pomodoro Timer</h3>
+        <div class="timer">
+          <span id="pomodoro-minutes">25</span>:<span id="pomodoro-seconds">00</span>
+        </div>
+        <button id="start-pomodoro" class="btn neumorphic">Start</button>
+        <button id="reset-pomodoro" class="btn neumorphic">Reset</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 Ultimate Time Balance. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <audio id="notification-sound" src="notification.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
 </body>
 </html>
