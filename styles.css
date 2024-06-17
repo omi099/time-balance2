@@ -1,0 +1,228 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #4caf50;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c8e6c9;
+}
+
+main {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-card, .quote, .pomodoro {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.balance-card h2, .quote h3, .pomodoro h3 {
+    margin-bottom: 0.5rem;
+}
+
+.balance-card .balance, .pomodoro .timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.balance-card .balance span, .pomodoro .timer span {
+    margin-left: 5px;
+    font-size: 1rem;
+    color: #777;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.quote p {
+    font-style: italic;
+    color: #555;
+}
+
+.pomodoro-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Neumorphic Styles */
+.neumorphic {
+    background: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+}
+
+.neumorphic:hover {
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav {
+    background-color: #333;
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .balance-card, body.dark-mode .quote, body.dark-mode .pomodoro {
+    background-color: #2a2a2a;
+    box-shadow: 8px 8px 16px #1c1c1c, -8px -8px 16px #383838;
+}
+
+body.dark-mode .btn {
+    background-color: #45a049;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #4caf50;
+    transform: translateY(-2px);
+}
+
+/* Loader Animation */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f9;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 10px solid #e0e0e0;
+    border-top: 10px solid #4caf50;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

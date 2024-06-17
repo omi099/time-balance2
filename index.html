@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Time Balance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    <div class="container">
+      <nav>
+        <h1>Time Balance</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" id="theme-toggle" title="Toggle Dark Mode">🌙</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div class="balance-card neumorphic">
+          <h2>Remaining Seconds Today</h2>
+          <div class="balance">
+            <span id="balance-value">0.00</span> <span>s</span>
+          </div>
+          <div class="progress-bar neumorphic">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+        <div class="quote neumorphic">
+          <p id="quote-text"></p>
+        </div>
+        <div class="pomodoro neumorphic">
+          <h3>Pomodoro Timer</h3>
+          <div class="timer">
+            <span id="pomodoro-minutes">25</span>:<span id="pomodoro-seconds"
+              >00</span
+            >
+          </div>
+          <div class="pomodoro-controls">
+            <button id="start-pomodoro" class="btn neumorphic">Start</button>
+            <button id="reset-pomodoro" class="btn neumorphic">Reset</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>© 2024 Ultimate Time Balance. All rights reserved.</p>
+      </footer>
+    </div>
+    <audio
+      id="notification-sound"
+      src="notification.mp3"
+      preload="auto"
+    ></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
