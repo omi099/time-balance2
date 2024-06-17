@@ -17,13 +17,13 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Calendar</a></li>
         <li><a href="#" id="theme-toggle" title="Toggle Dark Mode">🌙</a></li>
       </ul>
     </nav>
 
     <main>
-      <div class="balance-card neumorphic">
+      <section class="balance-card neumorphic">
         <h2>Remaining Time Balance Today</h2>
         <div class="balance">
           <div class="balance-values">
@@ -35,9 +35,9 @@
         <div class="progress-bar neumorphic">
           <div class="progress" id="progress"></div>
         </div>
-      </div>
+      </section>
 
-      <div class="custom-timer neumorphic">
+      <section class="custom-timer neumorphic">
         <h3>Set Custom Timer</h3>
         <label for="hours">Hours:</label>
         <input type="number" id="custom-hours" min="0" max="23" value="0">
@@ -47,20 +47,36 @@
         <input type="number" id="custom-seconds" min="0" max="59" value="0">
         <button id="start-custom-timer" class="btn neumorphic">Start Timer</button>
         <button id="reset-custom-timer" class="btn neumorphic">Reset Timer</button>
-      </div>
+      </section>
 
-      <div class="quote neumorphic">
+      <section class="quote neumorphic">
         <p id="quote-text"></p>
-      </div>
+      </section>
 
-      <div class="pomodoro neumorphic">
+      <section class="pomodoro neumorphic">
         <h3>Pomodoro Timer</h3>
         <div class="timer">
           <span id="pomodoro-minutes">25</span>:<span id="pomodoro-seconds">00</span>
         </div>
         <button id="start-pomodoro" class="btn neumorphic">Start</button>
         <button id="reset-pomodoro" class="btn neumorphic">Reset</button>
-      </div>
+      </section>
+
+      <section class="interval-timer neumorphic">
+        <h3>Interval Timer</h3>
+        <label for="work">Work Duration:</label>
+        <input type="number" id="work-duration" min="0" max="60" value="25">
+        <label for="rest">Rest Duration:</label>
+        <input type="number" id="rest-duration" min="0" max="30" value="5">
+        <button id="start-interval-timer" class="btn neumorphic">Start Interval Timer</button>
+      </section>
+
+      <section class="task-tracker neumorphic">
+        <h3>Task Tracker</h3>
+        <ul id="task-list"></ul>
+        <input type="text" id="new-task" placeholder="New Task">
+        <button id="add-task" class="btn neumorphic">Add Task</button>
+      </section>
     </main>
 
     <footer>
